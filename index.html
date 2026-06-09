@@ -273,10 +273,7 @@
     #profil { background: var(--paper); }
 
     .profil-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: start;
+      max-width: 860px;
     }
 
     .profil-text p {
@@ -910,14 +907,30 @@
       nav { padding: 18px 32px; }
       .nav-links { display: none; }
       section { padding: 80px 32px; }
+
+      /* Hero: stack vertically */
       #hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-right { min-height: 380px; }
       .hero-left { padding: 100px 32px 60px; }
-      .hero-data { padding: 40px 32px; }
-      .hero-data { display: grid; grid-template-columns: repeat(2, 1fr); align-content: center; gap: 0; }
-      .hero-data-label { grid-column: 1 / -1; }
-      .hero-stat { border-bottom: none; padding-bottom: 0; margin-bottom: 0; padding: 20px 0; }
-      .profil-grid { grid-template-columns: 1fr; gap: 48px; }
+      .hero-right { min-height: 320px; }
+      .hero-data {
+        padding: 40px 32px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: center;
+        gap: 0;
+      }
+      .hero-data-label { grid-column: 1 / -1; margin-bottom: 24px; }
+      .hero-stat {
+        border-bottom: none;
+        border-right: 1px solid rgba(245,242,236,0.1);
+        padding: 16px 20px;
+        margin-bottom: 0;
+      }
+      .hero-stat:nth-child(even) { border-right: none; }
+      .hero-stat:nth-child(n+4) { border-top: 1px solid rgba(245,242,236,0.1); }
+      .hero-stat-num { font-size: 38px; }
+
+      .profil-grid { max-width: 860px; }
       .leistungen-grid { grid-template-columns: 1fr; }
       .vorgehen-steps { grid-template-columns: 1fr 1fr; }
       .vorgehen-step { border-right: none; padding: 36px 24px; border-bottom: 1px solid var(--rule); }
@@ -932,9 +945,15 @@
       section { padding: 64px 20px; }
       nav { padding: 16px 20px; }
       .nav-cta { display: none; }
+
+      /* Hero mobile */
       .hero-left { padding: 80px 20px 48px; }
-      .profil-stats { grid-template-columns: 1fr 1fr; }
-      .stat-num { font-size: 36px; }
+      .hero-right { min-height: 280px; }
+      .hero-data { padding: 28px 20px; grid-template-columns: repeat(2, 1fr); gap: 0; }
+      .hero-stat-num { font-size: 30px; }
+      .hero-stat-desc { font-size: 11px; }
+      .hero-stat { padding: 12px 12px; }
+
       .form-row { grid-template-columns: 1fr; }
       .vorgehen-steps { grid-template-columns: 1fr; }
       footer { padding: 24px 20px; }
@@ -1032,39 +1051,7 @@
           <p>„Jemand, der Marketing, Vertrieb und Business Development auf Führungsebene gleichzeitig denken kann — und weiß, wie KI diese Disziplinen heute wirklich verändert."</p>
         </div>
       </div>
-      <div>
-        <div class="profil-stats">
-          <div class="stat-card">
-            <div class="stat-num">20+</div>
-            <div class="stat-label">Jahre Berufserfahrung im Marketing & Vertrieb</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">25+</div>
-            <div class="stat-label">Internationale Märkte geführt (EMEA)</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">200Mio+</div>
-            <div class="stat-label">EUR Umsatzverantwortung</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-num">20Mio+</div>
-            <div class="stat-label">EUR Marketingbudget verantwortet</div>
-          </div>
-          <div class="profil-brands">
-            <div class="profil-brands-label">Stationen & Marken</div>
-            <div class="brands-list">
-              <span class="brand-tag">LG</span>
-              <span class="brand-tag">ASUS</span>
-              <span class="brand-tag">Acer</span>
-              <span class="brand-tag">Shure</span>
-              <span class="brand-tag">Razer</span>
-              <span class="brand-tag">VCT EMEA</span>
-              <span class="brand-tag">Lamborghini</span>
-              <span class="brand-tag">NIU</span>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </section>
 
