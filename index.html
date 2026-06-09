@@ -1328,7 +1328,7 @@
           </a>
         </div>
       </div>
-      <form class="kontakt-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+      <form class="kontakt-form" id="kontakt-form" novalidate>
         <div class="form-row">
           <div class="form-field">
             <label for="name">Name</label>
@@ -1358,7 +1358,15 @@
           <label for="nachricht">Was ist dein Problem?</label>
           <textarea id="nachricht" name="nachricht" placeholder="Ein Satz reicht." data-placeholder-de="Ein Satz reicht." data-placeholder-en="One sentence is enough." required></textarea>
         </div>
-        <button type="submit" class="form-submit" data-i18n="form_submit">Nachricht senden</button>
+        <button type="submit" class="form-submit" id="form-submit-btn" data-i18n="form_submit">Nachricht senden</button>
+        <div id="form-success" style="display:none; margin-top:20px; padding:20px; border-left:4px solid #E85D2F; background:rgba(232,93,47,0.08); color:var(--paper);">
+          <strong id="form-success-title">Nachricht erhalten.</strong><br>
+          <span id="form-success-msg">Ich melde mich innerhalb von 24 Stunden.</span>
+        </div>
+        <div id="form-error" style="display:none; margin-top:20px; padding:20px; border-left:4px solid #c0392b; background:rgba(192,57,43,0.08); color:var(--paper);">
+          <strong id="form-error-title">Etwas ist schiefgelaufen.</strong><br>
+          <span id="form-error-msg">Bitte versuch es nochmal oder schreib direkt an mail@husingen.com</span>
+        </div>
       </form>
     </div>
   </section>
@@ -1590,6 +1598,73 @@
     };
 
     let lang = 'de';
+
+    // ── Kontaktformular ──────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', function () {
+      const form    = document.getElementById('kontakt-form');
+      const btn     = document.getElementById('form-submit-btn');
+      const success = document.getElementById('form-success');
+      const error   = document.getElementById('form-error');
+
+      const MSGS = {
+        de: {
+          sending: 'Wird gesendet …',
+          send: 'Nachricht senden',
+          successTitle: 'Nachricht erhalten.',
+          successMsg:   'Ich melde mich innerhalb von 24 Stunden.',
+          errorTitle:   'Etwas ist schiefgelaufen.',
+          errorMsg:     'Bitte versuch es nochmal oder schreib direkt an mail@husingen.com'
+        },
+        en: {
+          sending: 'Sending …',
+          send: 'Send message',
+          successTitle: 'Message received.',
+          successMsg:   "I'll be in touch within 24 hours.",
+          errorTitle:   'Something went wrong.',
+          errorMsg:     'Please try again or drop me a line at mail@husingen.com'
+        }
+      };
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const m = MSGS[lang];
+
+        // Basic validation
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        // Loading state
+        btn.disabled    = true;
+        btn.textContent = m.sending;
+        success.style.display = 'none';
+        error.style.display   = 'none';
+
+        try {
+          const data = new FormData(form);
+          const res  = await fetch('https://formspree.io/f/xgobygyq', {
+            method:  'POST',
+            headers: { 'Accept': 'application/json' },
+            body:    data
+          });
+
+          if (res.ok) {
+            success.style.display = 'block';
+            document.getElementById('form-success-title').textContent = m.successTitle;
+            document.getElementById('form-success-msg').textContent   = m.successMsg;
+            form.reset();
+          } else {
+            throw new Error('non-ok response');
+          }
+        } catch (_) {
+          error.style.display = 'block';
+          document.getElementById('form-error-title').textContent = MSGS[lang].errorTitle;
+          document.getElementById('form-error-msg').textContent   = MSGS[lang].errorMsg;
+        } finally {
+          btn.disabled    = false;
+          btn.textContent = MSGS[lang].send;
+        }
+      });
+    });
+    // ────────────────────────────────────────────────────────────────────
 
     function toggleLang() {
       lang = lang === 'de' ? 'en' : 'de';
