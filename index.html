@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>husingen. — Strategie, die operativ funktioniert.</title>
   <meta name="description" content="Christian Husingen — Sparringspartner für Marketing, Sales, Business Development und KI-Integration. Strategie, die operativ funktioniert." />
-  <meta property="og:title" content="husingen. — Strategy that ships." />
+  <meta property="og:title" content="husingen. — Strategie, die operativ funktioniert." />
   <meta property="og:description" content="Sparringspartner für Marketing, Sales, Business Development und KI-Integration." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -974,6 +974,22 @@
     .fade-up-2 { animation-delay: 0.15s; }
     .fade-up-3 { animation-delay: 0.3s; }
     .fade-up-4 { animation-delay: 0.45s; }
+
+    /* ─── LANG TOGGLE ─── */
+    .lang-toggle {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      border: 1.5px solid rgba(10,10,10,0.35);
+      background: transparent;
+      color: var(--off-black);
+      padding: 5px 11px;
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-left: 8px;
+      text-transform: uppercase;
+    }
+    .lang-toggle:hover { background: var(--off-black); color: var(--paper); border-color: var(--off-black); }
   </style>
 </head>
 <body>
@@ -982,49 +998,52 @@
   <nav>
     <a href="#hero" class="nav-logo">husingen<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#profil">Profil</a></li>
-      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#profil" data-i18n="nav_profile">Profil</a></li>
+      <li><a href="#leistungen" data-i18n="nav_services">Leistungen</a></li>
       <li><a href="#trackrecord">Track Record</a></li>
-      <li><a href="#engagements">Engagements</a></li>
+      <li><a href="#engagements" data-i18n="nav_partnerships">Partnerschaften</a></li>
     </ul>
-    <a href="#kontakt" class="nav-cta">Gespräch anfragen</a>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <a href="#kontakt" class="nav-cta" data-i18n="nav_cta">Gespräch anfragen</a>
+      <button class="lang-toggle" id="lang-btn" onclick="toggleLang()">EN</button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-left">
-      <p class="hero-label fade-up">Marketing · Sales · Business Development · KI</p>
+      <p class="hero-label fade-up" data-i18n="hero_label">Marketing · Sales · Business Development · KI</p>
       <h1 class="hero-headline fade-up fade-up-2">
-        Strategie,<br>die <em>operativ</em><br>funktioniert.
+        <span data-i18n="hero_headline">Strategie,<br>die <em>operativ</em><br>funktioniert.</span>
       </h1>
       <p class="hero-sub fade-up fade-up-3">
-        Ich bin Sparringspartner für Unternehmen und Führungskräfte, die Marketing, Vertrieb und Business Development nicht nur denken, sondern umsetzen wollen — und dabei KI als echten Hebel nutzen. Kein Deck-Berater. Jemand, der selbst gebaut, skaliert und verhandelt hat.
+        <span data-i18n="hero_sub">Ich bin Sparringspartner für Unternehmen und Führungskräfte, die Marketing, Vertrieb und Business Development nicht nur denken, sondern umsetzen wollen — und dabei KI als echten Hebel nutzen. Kein Deck-Berater. Jemand, der selbst gebaut, skaliert und verhandelt hat.</span>
       </p>
       <div class="hero-actions fade-up fade-up-4">
-        <a href="#kontakt" class="btn-primary">Gespräch anfragen</a>
-        <a href="#leistungen" class="btn-secondary">Was ich mache</a>
+        <a href="#kontakt" class="btn-primary" data-i18n="hero_cta">Gespräch anfragen</a>
+        <a href="#leistungen" class="btn-secondary" data-i18n="hero_cta2">Was ich mache</a>
       </div>
     </div>
     <div class="hero-right">
       <div class="hero-grid"></div>
       <div class="hero-accent-line"></div>
       <div class="hero-data">
-        <p class="hero-data-label">Operative Bilanz</p>
+        <p class="hero-data-label" data-i18n="hero_stat_label">Operative Bilanz</p>
         <div class="hero-stat">
           <div class="hero-stat-num">20<span>+</span></div>
-          <div class="hero-stat-desc">Jahre Berufserfahrung im Marketing & Vertrieb</div>
+          <div class="hero-stat-desc" data-i18n="stat1">Jahre Berufserfahrung im Marketing & Vertrieb</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">25<span>+</span></div>
-          <div class="hero-stat-desc">Internationale Märkte geführt (EMEA)</div>
+          <div class="hero-stat-desc" data-i18n="stat2">Internationale Märkte geführt (EMEA)</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">200<span>Mio+</span></div>
-          <div class="hero-stat-desc">EUR Umsatzverantwortung</div>
+          <div class="hero-stat-desc" data-i18n="stat3">EUR Umsatzverantwortung</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">20<span>Mio+</span></div>
-          <div class="hero-stat-desc">EUR Marketingbudget verantwortet</div>
+          <div class="hero-stat-desc" data-i18n="stat4">EUR Marketingbudget verantwortet</div>
         </div>
       </div>
     </div>
@@ -1034,7 +1053,7 @@
   <section id="profil">
     <div class="section-header">
       <span class="section-num">01</span>
-      <h2 class="section-title">Operator, nicht Berater.</h2>
+      <h2 class="section-title" data-i18n="profil_title">Operator, nicht Berater.</h2>
     </div>
     <div class="profil-grid">
       <div class="profil-text">
@@ -1048,7 +1067,7 @@
           Mein Fokus: <strong>Marketing, Sales & Vertrieb, Business Development und KI-Integration</strong>. Das Schnittfeld dieser vier Disziplinen ist mein Zuhause — mit tiefer Branchenkenntnis in Consumer Electronics, Audio, Gaming und E-Commerce.
         </p>
         <div class="profil-quote">
-          <p>„Jemand, der Marketing, Vertrieb und Business Development auf Führungsebene gleichzeitig denken kann — und weiß, wie KI diese Disziplinen heute wirklich verändert."</p>
+          <p data-i18n="profil_quote">Jemand, der Marketing, Vertrieb und Business Development auf Führungsebene gleichzeitig denken kann — und weiß, wie KI diese Disziplinen heute wirklich verändert.</p>
         </div>
       </div>
 
@@ -1059,7 +1078,7 @@
   <section id="leistungen">
     <div class="section-header">
       <span class="section-num">02</span>
-      <h2 class="section-title">Was ich mache.</h2>
+      <h2 class="section-title" data-i18n="leistungen_title">Was ich mache.</h2>
     </div>
     <div class="leistungen-grid">
       <div class="leistung-card">
@@ -1130,27 +1149,27 @@
   <section id="vorgehen">
     <div class="section-header">
       <span class="section-num">03</span>
-      <h2 class="section-title">Wie ich arbeite.</h2>
+      <h2 class="section-title" data-i18n="vorgehen_title">Wie ich arbeite.</h2>
     </div>
     <div class="vorgehen-steps">
       <div class="vorgehen-step">
-        <div class="step-num">Schritt 01</div>
-        <h3 class="step-title">Einordnung</h3>
+        <div class="step-num" data-i18n="step1_num">Schritt 01</div>
+        <h3 class="step-title" data-i18n="step1_title">Einordnung</h3>
         <p class="step-desc">Erstes Gespräch, 60 Minuten. Ich höre zu. Ich frage nach. Ich stelle fest, ob ich der richtige Sparringspartner bin — und sage es, wenn nicht. Kein Verkaufsgespräch.</p>
       </div>
       <div class="vorgehen-step">
-        <div class="step-num">Schritt 02</div>
-        <h3 class="step-title">Eintauchen</h3>
+        <div class="step-num" data-i18n="step2_num">Schritt 02</div>
+        <h3 class="step-title" data-i18n="step2_title">Eintauchen</h3>
         <p class="step-desc">Ich schaue mir an, was tatsächlich los ist: Daten, Kampagnen, Strukturen, Kanäle. Nicht oberflächlich. Schnell, aber gründlich — weil ich weiß, wo ich schauen muss.</p>
       </div>
       <div class="vorgehen-step">
-        <div class="step-num">Schritt 03</div>
-        <h3 class="step-title">Entscheidung</h3>
+        <div class="step-num" data-i18n="step3_num">Schritt 03</div>
+        <h3 class="step-title" data-i18n="step3_title">Entscheidung</h3>
         <p class="step-desc">Kein 80-seitiger Report. Drei bis fünf klare Empfehlungen, priorisiert, mit Begründung. Was sofort, was mittelfristig, was ich weglassen würde. Klares Wort, kein Weichspülen.</p>
       </div>
       <div class="vorgehen-step">
-        <div class="step-num">Schritt 04</div>
-        <h3 class="step-title">Umsetzung</h3>
+        <div class="step-num" data-i18n="step4_num">Schritt 04</div>
+        <h3 class="step-title" data-i18n="step4_title">Umsetzung</h3>
         <p class="step-desc">Wenn gewünscht, bleibe ich an Bord: als Retainer, als regelmäßiger Sparringspartner, als jemand, der Umsetzung begleitet und nachjustiert. Nicht als Consultant auf Distanz.</p>
       </div>
     </div>
@@ -1163,7 +1182,7 @@
       <h2 class="section-title">Track Record.</h2>
     </div>
     <p class="tr-intro">
-      Zwei Jahrzehnte in Führungspositionen bei globalen Marken aus Consumer Electronics, Professional Audio und Gaming — sowohl im B2C- als auch im B2B-Umfeld.
+      <span data-i18n="tr_intro">Zwei Jahrzehnte in Führungspositionen bei globalen Marken aus Consumer Electronics, Professional Audio und Gaming — sowohl im B2C- als auch im B2B-Umfeld.</span>
     </p>
     <div class="tr-engagements">
       <div class="tr-item">
@@ -1209,7 +1228,7 @@
     </div>
 
     <div class="tr-partnerships">
-      <div class="tr-partnerships-label">Ausgewählte Partnerschaften & Projekte</div>
+      <div class="tr-partnerships-label" data-i18n="partnerships_label">Ausgewählte Partnerschaften & Projekte</div>
       <div class="partnerships-grid">
         <div class="partnership-card">
           <div class="partnership-brand">Alliance Partnerships</div>
@@ -1253,13 +1272,13 @@
   <section id="engagements">
     <div class="section-header">
       <span class="section-num">05</span>
-      <h2 class="section-title">Wie wir arbeiten können.</h2>
+      <h2 class="section-title" data-i18n="eng_title">Wie wir arbeiten können.</h2>
     </div>
     <div class="engagements-grid">
       <div class="engagement-card">
-        <span class="engagement-badge">Einstieg</span>
+        <span class="engagement-badge" data-i18n="eng1_badge">Einstieg</span>
         <h3 class="engagement-title">Sparring Day</h3>
-        <p class="engagement-price">Tagessatz · auf Anfrage</p>
+        <p class="engagement-price" data-i18n="eng1_price">Tagessatz · auf Anfrage</p>
         <p class="engagement-desc">Ein Tag. Ein Thema. Eine klare Einschätzung. Ideal für einen ersten, tiefen Tauchgang — Strategie-Review, Pitch-Vorbereitung oder konkrete Problemlösung.</p>
         <ul class="engagement-includes">
           <li>Vorgespräch (60 min) zur Vorbereitung</li>
@@ -1270,9 +1289,9 @@
         <a href="#kontakt" class="engagement-cta">Anfragen</a>
       </div>
       <div class="engagement-card featured">
-        <span class="engagement-badge">Empfohlen</span>
+        <span class="engagement-badge" data-i18n="eng2_badge">Empfohlen</span>
         <h3 class="engagement-title">Project Advisory</h3>
-        <p class="engagement-price">Projektbasis · 4–12 Wochen</p>
+        <p class="engagement-price" data-i18n="eng2_price">Projektbasis · 4–12 Wochen</p>
         <p class="engagement-desc">Für konkrete Projekte mit klarem Scope und Ziel — Launch, Repositionierung, Markteintritt, Kanal-Aufbau. Ich bin dabei, bis es geliefert ist.</p>
         <ul class="engagement-includes">
           <li>Kickoff & strukturierte Analyse</li>
@@ -1284,9 +1303,9 @@
         <a href="#kontakt" class="engagement-cta">Anfragen</a>
       </div>
       <div class="engagement-card">
-        <span class="engagement-badge">Langfristig</span>
+        <span class="engagement-badge" data-i18n="eng3_badge">Langfristig</span>
         <h3 class="engagement-title">Retainer</h3>
-        <p class="engagement-price">Monatlich · auf Anfrage</p>
+        <p class="engagement-price" data-i18n="eng3_price">Monatlich · auf Anfrage</p>
         <p class="engagement-desc">Für Unternehmen, die einen verlässlichen Sparringspartner brauchen — nicht für jedes Einzelprojekt, sondern als regelmäßigen strategischen Kontrapunkt.</p>
         <ul class="engagement-includes">
           <li>2–4 Sessions pro Monat</li>
@@ -1303,12 +1322,12 @@
   <section id="kontakt">
     <div class="section-header">
       <span class="section-num">06</span>
-      <h2 class="section-title">Gespräch anfragen.</h2>
+      <h2 class="section-title" data-i18n="kontakt_title">Gespräch anfragen.</h2>
     </div>
     <div class="kontakt-grid">
       <div class="kontakt-text">
-        <h3>Kein Formular-Ping-Pong.<br>Direkt anfragen.</h3>
-        <p>Wenn du das Gefühl hast, dass das passt — schreib mir. Kein Pitch nötig, kein ausformuliertes Briefing. Ein Satz reicht: Was ist dein Problem?</p>
+        <h3 data-i18n="kontakt_h3">Kein Formular-Ping-Pong.<br>Direkt anfragen.</h3>
+        <p data-i18n="kontakt_p">Wenn du das Gefühl hast, dass das passt — schreib mir. Kein Pitch nötig, kein ausformuliertes Briefing. Ein Satz reicht: Was ist dein Problem?</p>
         <div class="kontakt-direct">
           <a href="mailto:mail@husingen.com" class="kontakt-link">
             <span>✉</span>
@@ -1350,7 +1369,7 @@
           <label for="nachricht">Was ist dein Problem?</label>
           <textarea id="nachricht" name="nachricht" placeholder="Ein Satz reicht." required></textarea>
         </div>
-        <button type="submit" class="form-submit">Nachricht senden</button>
+        <button type="submit" class="form-submit" data-i18n="form_submit">Nachricht senden</button>
       </form>
     </div>
   </section>
@@ -1362,7 +1381,7 @@
       <a onclick="document.getElementById('modal-impressum').classList.add('open')">Impressum</a>
       <a onclick="document.getElementById('modal-datenschutz').classList.add('open')">Datenschutz</a>
     </div>
-    <div class="footer-copy">© 2026 Christian Husingen. Alle Rechte vorbehalten.</div>
+    <div class="footer-copy" data-i18n="footer_copy">© 2026 Christian Husingen. Alle Rechte vorbehalten.</div>
   </footer>
 
   <!-- MODAL IMPRESSUM -->
@@ -1372,8 +1391,8 @@
       <h2>Impressum</h2>
       <h3>Angaben gemäß § 5 TMG</h3>
       <p>Christian Husingen<br>
-      [Straße und Hausnummer]<br>
-      [PLZ Ort]<br>
+      Postweg 11<br>
+      47929 Grefrath<br>
       Deutschland</p>
       <h3>Kontakt</h3>
       <p>E-Mail: mail@husingen.com</p>
@@ -1381,8 +1400,7 @@
       <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [wird nach Gewerbeanmeldung ergänzt]</p>
       <h3>Berufsbezeichnung und berufsrechtliche Regelungen</h3>
       <p>Unternehmensberater, eingetragen im Handels-/Gewerberegister [Ort]. Zuständige Aufsichtsbehörde: [Gewerbeamt]</p>
-      <p><em>Hinweis: Dieses Impressum enthält Platzhalter, die nach der Gewerbeanmeldung zu vervollständigen sind.</em></p>
-    </div>
+      </div>
   </div>
 
   <!-- MODAL DATENSCHUTZ -->
@@ -1391,7 +1409,7 @@
       <button class="modal-close" onclick="document.getElementById('modal-datenschutz').classList.remove('open')">✕</button>
       <h2>Datenschutzerklärung</h2>
       <h3>1. Verantwortlicher</h3>
-      <p>Christian Husingen, [Adresse] — Kontakt: mail@husingen.com</p>
+      <p>Christian Husingen, Postweg 11, 47929 Grefrath — Kontakt: mail@husingen.com</p>
       <h3>2. Erhebung und Verarbeitung personenbezogener Daten</h3>
       <p>Diese Website erhebt beim Aufruf keine personenbezogenen Daten über Tracking-Cookies. Das Kontaktformular übermittelt Ihre Angaben (Name, E-Mail, Nachricht) ausschließlich zum Zweck der Kontaktaufnahme.</p>
       <h3>3. Kontaktformular</h3>
@@ -1399,8 +1417,7 @@
       <h3>4. Ihre Rechte</h3>
       <p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung Ihrer gespeicherten Daten sowie das Recht auf Datenübertragbarkeit. Wenden Sie sich dazu an mail@husingen.com.</p>
       <h3>5. Hosting</h3>
-      <p>Diese Website wird über [Vercel / Netlify / Cloudflare Pages] gehostet. Es gilt die Datenschutzerklärung des jeweiligen Anbieters.</p>
-      <p><em>Hinweis: Diese Datenschutzerklärung ist ein Platzhalter und vor Go-Live anwaltlich zu prüfen bzw. über einen Generator wie eRecht24 zu erstellen.</em></p>
+      <p>Diese Website wird über Vercel (Vercel Inc., 340 Pine Street, San Francisco, CA 94104, USA) gehostet. Es gilt die <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Datenschutzerklärung von Vercel</a>.</p>
     </div>
   </div>
 
@@ -1455,6 +1472,114 @@
     sections.forEach(s => sectionObserver.observe(s));
   </script>
 
+
+  <script>
+    const translations = {
+      de: {
+        nav_profile: "Profil",
+        nav_services: "Leistungen",
+        nav_partnerships: "Partnerschaften",
+        nav_cta: "Gespräch anfragen",
+        hero_label: "Marketing · Sales · Business Development · KI",
+        hero_headline: "Strategie,<br>die <em>operativ</em><br>funktioniert.",
+        hero_sub: "Ich bin Sparringspartner für Unternehmen und Führungskräfte, die Marketing, Vertrieb und Business Development nicht nur denken, sondern umsetzen wollen — und dabei KI als echten Hebel nutzen. Kein Deck-Berater. Jemand, der selbst gebaut, skaliert und verhandelt hat.",
+        hero_cta: "Gespräch anfragen",
+        hero_cta2: "Was ich mache",
+        hero_stat_label: "Operative Bilanz",
+        stat1: "Jahre Berufserfahrung im Marketing & Vertrieb",
+        stat2: "Internationale Märkte geführt (EMEA)",
+        stat3: "EUR Umsatzverantwortung",
+        stat4: "EUR Marketingbudget verantwortet",
+        profil_title: "Operator, nicht Berater.",
+        profil_quote: "Jemand, der Marketing, Vertrieb und Business Development auf Führungsebene gleichzeitig denken kann — und weiß, wie KI diese Disziplinen heute wirklich verändert.",
+        leistungen_title: "Was ich mache.",
+        vorgehen_title: "Wie ich arbeite.",
+        step1_num: "Schritt 01", step2_num: "Schritt 02", step3_num: "Schritt 03", step4_num: "Schritt 04",
+        step1_title: "Einordnung", step2_title: "Eintauchen", step3_title: "Entscheidung", step4_title: "Umsetzung",
+        tr_intro: "Zwei Jahrzehnte in Führungspositionen bei globalen Marken aus Consumer Electronics, Professional Audio und Gaming — sowohl im B2C- als auch im B2B-Umfeld.",
+        partnerships_label: "Ausgewählte Partnerschaften & Projekte",
+        eng_title: "Wie wir arbeiten können.",
+        eng1_badge: "Einstieg", eng2_badge: "Empfohlen", eng3_badge: "Langfristig",
+        eng1_price: "Tagessatz · auf Anfrage",
+        eng2_price: "Projektbasis · 4–12 Wochen",
+        eng3_price: "Monatlich · auf Anfrage",
+        kontakt_title: "Gespräch anfragen.",
+        kontakt_h3: "Kein Formular-Ping-Pong.<br>Direkt anfragen.",
+        kontakt_p: "Wenn du das Gefühl hast, dass das passt — schreib mir. Kein Pitch nötig, kein ausformuliertes Briefing. Ein Satz reicht: Was ist dein Problem?",
+        form_submit: "Nachricht senden",
+        footer_copy: "© 2026 Christian Husingen. Alle Rechte vorbehalten."
+      },
+      en: {
+        nav_profile: "Profile",
+        nav_services: "Services",
+        nav_partnerships: "Partnerships",
+        nav_cta: "Book a Call",
+        hero_label: "Marketing · Sales · Business Development · AI",
+        hero_headline: "Strategy that<br>actually <em>ships</em>.",
+        hero_sub: "I'm a sparring partner for companies and executives who don't just want to think through Marketing, Sales and Business Development — but execute it. With AI as a real lever. Not a deck consultant. Someone who has built, scaled and negotiated.",
+        hero_cta: "Book a Call",
+        hero_cta2: "What I do",
+        hero_stat_label: "Operational Track Record",
+        stat1: "Years of experience in Marketing & Sales",
+        stat2: "International markets led (EMEA)",
+        stat3: "EUR revenue responsibility",
+        stat4: "EUR marketing budget managed",
+        profil_title: "Operator, not Consultant.",
+        profil_quote: "Someone who can simultaneously think Marketing, Sales and Business Development at leadership level — and understands how AI is genuinely changing these disciplines today.",
+        leistungen_title: "What I do.",
+        vorgehen_title: "How I work.",
+        step1_num: "Step 01", step2_num: "Step 02", step3_num: "Step 03", step4_num: "Step 04",
+        step1_title: "Assessment", step2_title: "Deep Dive", step3_title: "Decision", step4_title: "Execution",
+        tr_intro: "Two decades in leadership positions at global brands in Consumer Electronics, Professional Audio and Gaming — both B2C and B2B.",
+        partnerships_label: "Selected Partnerships & Projects",
+        eng_title: "How we can work together.",
+        eng1_badge: "Entry", eng2_badge: "Recommended", eng3_badge: "Long-term",
+        eng1_price: "Day rate · on request",
+        eng2_price: "Project basis · 4–12 weeks",
+        eng3_price: "Monthly · on request",
+        kontakt_title: "Book a Call.",
+        kontakt_h3: "No form ping-pong.<br>Direct contact.",
+        kontakt_p: "If you feel this could be a fit — write to me. No pitch needed, no detailed briefing. One sentence is enough: What's your problem?",
+        form_submit: "Send Message",
+        footer_copy: "© 2026 Christian Husingen. All rights reserved."
+      }
+    };
+
+    let currentLang = 'de';
+
+    function toggleLang() {
+      currentLang = currentLang === 'de' ? 'en' : 'de';
+      const t = translations[currentLang];
+      document.getElementById('lang-btn').textContent = currentLang === 'de' ? 'EN' : 'DE';
+      document.documentElement.lang = currentLang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.innerHTML = t[key];
+      });
+      // Update page title
+      document.title = currentLang === 'en'
+        ? 'husingen. — Strategy that actually ships.'
+        : 'husingen. — Strategie, die operativ funktioniert.';
+      // Update form labels
+      if (currentLang === 'en') {
+        document.querySelector('label[for="name"]').textContent = 'Name';
+        document.querySelector('label[for="company"]').textContent = 'Company';
+        document.querySelector('label[for="email"]').textContent = 'Email';
+        document.querySelector('label[for="thema"]').textContent = 'Topic';
+        document.querySelector('label[for="nachricht"]').textContent = 'What is your problem?';
+        document.querySelector('#thema option[value=""]').textContent = 'Choose…';
+        document.querySelector('#thema option[value="sonstiges"]').textContent = 'Other';
+      } else {
+        document.querySelector('label[for="name"]').textContent = 'Name';
+        document.querySelector('label[for="company"]').textContent = 'Unternehmen';
+        document.querySelector('label[for="email"]').textContent = 'E-Mail';
+        document.querySelector('label[for="thema"]').textContent = 'Thema';
+        document.querySelector('label[for="nachricht"]').textContent = 'Was ist dein Problem?';
+        document.querySelector('#thema option[value=""]').textContent = 'Wählen …';
+        document.querySelector('#thema option[value="sonstiges"]').textContent = 'Sonstiges';
+      }
+    }
+  </script>
+
 </body>
 </html>
-        
