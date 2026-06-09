@@ -1462,297 +1462,164 @@
   </script>
 
 
+
+
+
+
   <script>
-    const translations = {
+    const T = {
       de: {
-        nav_profile: "Profil",
-        nav_services: "Leistungen",
-        nav_partnerships: "Partnerschaften",
-        nav_cta: "Gespräch anfragen",
-        hero_label: "Marketing · Sales · Business Development · KI",
-        hero_headline: "Strategie,<br>die <em>operativ</em><br>funktioniert.",
-        hero_sub: "Ich bin Sparringspartner für Unternehmen und Führungskräfte, die Marketing, Vertrieb und Business Development nicht nur denken, sondern umsetzen wollen — und dabei KI als echten Hebel nutzen. Kein Deck-Berater. Jemand, der selbst gebaut, skaliert und verhandelt hat.",
-        hero_cta: "Gespräch anfragen",
-        hero_cta2: "Was ich mache",
-        hero_stat_label: "Operative Bilanz",
-        stat1: "Jahre Berufserfahrung im Marketing & Vertrieb",
-        stat2: "Internationale Märkte geführt (EMEA)",
-        stat3: "EUR Umsatzverantwortung",
-        stat4: "EUR Marketingbudget verantwortet",
-        profil_title: "Operator, nicht Berater.",
-        profil_quote: "Jemand, der Marketing, Vertrieb und Business Development auf Führungsebene gleichzeitig denken kann — und weiß, wie KI diese Disziplinen heute wirklich verändert.",
-        leistungen_title: "Was ich mache.",
-        vorgehen_title: "Wie ich arbeite.",
-        step1_num: "Schritt 01", step2_num: "Schritt 02", step3_num: "Schritt 03", step4_num: "Schritt 04",
-        step1_title: "Einordnung", step2_title: "Eintauchen", step3_title: "Entscheidung", step4_title: "Umsetzung",
-        tr_intro: "Zwei Jahrzehnte in Führungspositionen bei globalen Marken aus Consumer Electronics, Professional Audio und Gaming — sowohl im B2C- als auch im B2B-Umfeld.",
-        partnerships_label: "Ausgewählte Partnerschaften & Projekte",
-        eng_title: "Wie wir arbeiten können.",
-        eng1_badge: "Einstieg", eng2_badge: "Empfohlen", eng3_badge: "Langfristig",
-        eng1_price: "Tagessatz · auf Anfrage",
-        eng2_price: "Projektbasis · 4–12 Wochen",
-        eng3_price: "Monatlich · auf Anfrage",
-        kontakt_title: "Gespräch anfragen.",
-        kontakt_h3: "Kein Formular-Ping-Pong.<br>Direkt anfragen.",
-        kontakt_p: "Wenn du das Gefühl hast, dass das passt — schreib mir. Kein Pitch nötig, kein ausformuliertes Briefing. Ein Satz reicht: Was ist dein Problem?",
-        form_submit: "Nachricht senden",
-        footer_copy: "© 2026 Christian Husingen. Alle Rechte vorbehalten."
+        nav_profile:"Profil", nav_services:"Leistungen", nav_partnerships:"Partnerschaften", nav_cta:"Gespräch anfragen",
+        hero_label:"Marketing · Sales · Business Development · KI",
+        hero_headline:"Strategie,<br>die <em>operativ</em><br>funktioniert.",
+        hero_sub:"Ich bin Sparringspartner für Unternehmen und Führungskräfte, die Marketing, Vertrieb und Business Development nicht nur denken, sondern umsetzen wollen — und dabei KI als echten Hebel nutzen. Kein Deck-Berater. Jemand, der selbst gebaut, skaliert und verhandelt hat.",
+        hero_cta:"Gespräch anfragen", hero_cta2:"Was ich mache",
+        hero_stat_label:"Operative Bilanz",
+        stat1:"Jahre Berufserfahrung im Marketing & Vertrieb",
+        stat2:"Internationale Märkte geführt (EMEA)",
+        stat3:"EUR Umsatzverantwortung",
+        stat4:"EUR Marketingbudget verantwortet",
+        profil_title:"Operator, nicht Berater.",
+        profil_p1:"Ich habe nicht in einer Beratung gelernt zu beraten. Ich habe in Unternehmen gebaut: <strong>Marketing-Organisationen aufgestellt, E-Commerce-Kanäle skaliert, globale Markenpartnerschaften verhandelt</strong> — und das über zwei Dekaden in einem der kompetitivsten Segmente überhaupt.",
+        profil_p2:"Heute gebe ich dieses Wissen weiter — nicht als Methode, sondern als Urteil. Wer mit mir arbeitet, bekommt in wenigen Tagen eine Einschätzung, für die andere Monate brauchen. Weil ich die Fehler kenne. Weil ich die Abkürzungen kenne.",
+        profil_p3:"Mein Fokus: <strong>Marketing, Sales & Vertrieb, Business Development und KI-Integration</strong>. Das Schnittfeld dieser vier Disziplinen ist mein Zuhause — mit tiefer Branchenkenntnis in Consumer Electronics, Audio, Gaming und E-Commerce.",
+        profil_quote:"Jemand, der Marketing, Vertrieb und Business Development auf Führungsebene gleichzeitig denken kann — und weiß, wie KI diese Disziplinen heute wirklich verändert.",
+        leistungen_title:"Was ich mache.",
+        l1_desc:"Von Channel-Marketing über Brand, Performance und Community bis zu PR, von Amazon bis zu Partner- und Lizenzmarketing. Ganzheitliches Marketing mit operativer Tiefe — ich sage, was funktioniert und was Geld verbrennt.",
+        l1_tag4:"PR · Esports · Amazon",
+        l2_desc:"Vertriebsstrukturen aufbauen, Märkte analysieren, Portfolios schärfen. Ob klassischer Retail, E-Tail oder D2C — ich baue Vertrieb, der skaliert.",
+        l2_tag1:"Vertriebsstrukturen", l2_tag2:"Markt- & Portfolioanalyse", l2_tag3:"Preisgestaltung",
+        l3_desc:"B2B-Geschäft aufbauen, Partner- und Alliance-Ökosysteme entwickeln, Lizenz- und Kooperationsmodelle verhandeln. Ich öffne Türen und strukturiere Partnerschaften, die langfristig tragen.",
+        l3_tag1:"B2B-Aufbau", l3_tag3:"Lizenz & Kooperationen",
+        l4_title:"KI-Integration",
+        l4_desc:"KI nicht als Buzzword, sondern als operativen Hebel: Prozesse automatisieren, Workflows mit KI-Agenten optimieren, Teams befähigen. Ich zeige, wo KI im Marketing, Vertrieb und Business Development echten Unterschied macht.",
+        l4_tag1:"KI-Prozessintegration", l4_tag2:"Automatisierung", l4_tag3:"KI-Agenten",
+        vorgehen_title:"Wie ich arbeite.",
+        step1_num:"Schritt 01", step2_num:"Schritt 02", step3_num:"Schritt 03", step4_num:"Schritt 04",
+        step1_title:"Einordnung", step2_title:"Eintauchen", step3_title:"Entscheidung", step4_title:"Umsetzung",
+        step1_desc:"Erstes Gespräch, 60 Minuten. Ich höre zu. Ich frage nach. Ich stelle fest, ob ich der richtige Sparringspartner bin — und sage es, wenn nicht. Kein Verkaufsgespräch.",
+        step2_desc:"Ich schaue mir an, was tatsächlich los ist: Daten, Kampagnen, Strukturen, Kanäle. Nicht oberflächlich. Schnell, aber gründlich — weil ich weiß, wo ich schauen muss.",
+        step3_desc:"Kein 80-seitiger Report. Drei bis fünf klare Empfehlungen, priorisiert, mit Begründung. Was sofort, was mittelfristig, was ich weglassen würde. Klares Wort, kein Weichspülen.",
+        step4_desc:"Wenn gewünscht, bleibe ich an Bord: als Retainer, als regelmäßiger Sparringspartner, als jemand, der Umsetzung begleitet und nachjustiert. Nicht als Consultant auf Distanz.",
+        tr_intro:"Zwei Jahrzehnte in Führungspositionen bei globalen Marken aus Consumer Electronics, Professional Audio und Gaming — sowohl im B2C- als auch im B2B-Umfeld.",
+        tr_razer:"<strong>Head of Marketing &amp; Business Development — EMEA</strong><br>Verantwortung für Marketing, Brand und Community im Gaming-Hardware- und Softwaresegment. Entwicklung und Steuerung von Brand-Kampagnen, Social Media, PR (Launch- und Sustain-Aktivitäten) sowie Esports-Partnerschaften und Creator-Programmen. Gesamtverantwortung für das Produktportfolio der Marke in Europa. Strategische Kooperationen mit VCT EMEA sowie Non-Endemic-Brands wie Lamborghini und NIU. Internationales Team- und Agentur-Management über mehrere EMEA-Märkte.",
+        tr_shure:"<strong>Associate Director — EMEA</strong><br>Verantwortung für die Skalierung des Consumer Audio Segments in ganz EMEA — inklusive Distributionsaufbau, Retail-Aufbau sowie vollständiger Sales- und Marketingverantwortung. Aufbau von Pricing-, Portfolio- und Kanalstrukturen für B2C und Fachhandel. Darüber hinaus initialer Aufbau des B2B- und UCC-Bereichs für die Marke Stem — von der Markteinführung bis zur Etablierung der Vertriebsstrukturen in der Unified Communications-Kategorie.",
+        tr_acer:"<strong>Trade &amp; Channel Marketing — EMEA</strong><br>Gesamtverantwortung für Trade und Channel Marketing auf EMEA-Ebene — inklusive der Entwicklung übergreifender Guidelines und Umsetzungskonzepte für Shop-in-Shop, Merchandising, Sales-Promoter-Programme und Partnerkommunikation. Verantwortung für Shop-in-Shop-Budgets von ca. 25 Mio. EUR p.a. Direkte operative Umsetzung in DACH, Benelux, Tschechien, der Slowakei und Ungarn — parallel zur EMEA-weiten Steuerung der Gesamtstrategie.",
+        tr_asus:"<strong>Trade Marketing Manager — Deutschland &amp; Österreich</strong><br>Entwicklung und Umsetzung eines neuen Shop-in-Shop-Konzepts für den deutschen und österreichischen Markt. Pitching und Aufbau einer externen Sales-Promoter-Agentur sowie Einstellung und Etablierung einer eigenen Sales- und Merchandising-Force von fünf Mitarbeitern im Handel. Verantwortung für POS-Aktivierung, Handelsmarketing und die operative Umsetzung am Point of Sale.",
+        tr_lg:"<strong>Trade Marketing Manager — Deutschland</strong><br>Einstieg mit Fokus auf BTL-Aktivitäten, Shop-in-Shop und POS-Installationen. Weiterentwicklung zur Gesamtverantwortung für Trade Marketing über die Business Units Braune Ware, Weiße Ware und IT. Steuerung und Führung von Sales Promotern, Merchandisern und Produkttrainern für alle Produktkategorien. Verantwortung für die gesamten Trade-Marketing-Aktivitäten in Deutschland. Parallel Mitarbeit in internationalen Marketing-Arbeitsgruppen — u.a. verantwortlich für die Handelsintegration von Smart TV und 3D TV.",
+        partnerships_label:"Ausgewählte Partnerschaften & Projekte",
+        p1_desc:"Aufbau und Steuerung strategischer Technologie-Allianzen mit führenden Hardware- und Software-Partnern. Co-Marketing, Co-Branding und gemeinsame Go-to-Market-Aktivitäten auf europäischer Ebene.",
+        p2_desc:"Esports-Sponsorings, Team-Partnerschaften und Publisher-Kooperationen im europäischen Gaming-Ökosystem — von Turniersystemen bis zu Creator-Programmen und Teampartnerschaften.",
+        p3_desc:"Non-Endemic-Brand-Aktivierungen im Gaming-Kontext — Luxus, Mode, Musik und Motorsport treffen auf eine junge, globale Audience. Paradebeispiele für Cross-Category-Kollaborationen mit echtem kulturellen Resonanzraum.",
+        eng_title:"Wie wir arbeiten können.",
+        eng1_badge:"Einstieg", eng2_badge:"Empfohlen", eng3_badge:"Langfristig",
+        eng1_price:"Tagessatz · auf Anfrage", eng2_price:"Projektbasis · 4–12 Wochen", eng3_price:"Monatlich · auf Anfrage",
+        eng1_desc:"Ein Tag. Ein Thema. Eine klare Einschätzung. Ideal für einen ersten, tiefen Tauchgang — Strategie-Review, Pitch-Vorbereitung oder konkrete Problemlösung.",
+        eng2_desc:"Für konkrete Projekte mit klarem Scope und Ziel — Launch, Repositionierung, Markteintritt, Kanal-Aufbau. Ich bin dabei, bis es geliefert ist.",
+        eng3_desc:"Für Unternehmen, die einen verlässlichen Sparringspartner brauchen — nicht für jedes Einzelprojekt, sondern als regelmäßigen strategischen Kontrapunkt.",
+        eng1_list:"<li>Vorgespräch (60 min) zur Vorbereitung</li><li>Ganztägige Sparring-Session (remote oder vor Ort)</li><li>Schriftliche Zusammenfassung mit Empfehlungen</li><li>Follow-up-Call (30 min) nach zwei Wochen</li>",
+        eng2_list:"<li>Kickoff &amp; strukturierte Analyse</li><li>Wöchentliche Sparring-Sessions</li><li>Strategie-Dokument &amp; Umsetzungs-Roadmap</li><li>Begleitung der Umsetzung auf Wunsch</li><li>Slack/E-Mail-Zugang zwischen Sessions</li>",
+        eng3_list:"<li>2–4 Sessions pro Monat</li><li>Priorisierter Zugang &amp; schnelle Reaktionszeiten</li><li>Strategische Begleitung über Themen hinweg</li><li>Netzwerk-Zugang bei Bedarf</li>",
+        eng_cta:"Anfragen",
+        kontakt_title:"Gespräch anfragen.", kontakt_h3:"Kein Formular-Ping-Pong.<br>Direkt anfragen.",
+        kontakt_p:"Wenn du das Gefühl hast, dass das passt — schreib mir. Kein Pitch nötig, kein ausformuliertes Briefing. Ein Satz reicht: Was ist dein Problem?",
+        form_submit:"Nachricht senden",
+        footer_impressum:"Impressum", footer_datenschutz:"Datenschutz",
+        footer_copy:"© 2026 Christian Husingen. Alle Rechte vorbehalten."
       },
       en: {
-        nav_profile: "Profile",
-        nav_services: "Services",
-        nav_partnerships: "Partnerships",
-        nav_cta: "Book a Call",
-        hero_label: "Marketing · Sales · Business Development · AI",
-        hero_headline: "Strategy that<br>actually <em>ships</em>.",
-        hero_sub: "I'm a sparring partner for companies and executives who don't just want to think through Marketing, Sales and Business Development — but execute it. With AI as a real lever. Not a deck consultant. Someone who has built, scaled and negotiated.",
-        hero_cta: "Book a Call",
-        hero_cta2: "What I do",
-        hero_stat_label: "Operational Track Record",
-        stat1: "Years of experience in Marketing & Sales",
-        stat2: "International markets led (EMEA)",
-        stat3: "EUR revenue responsibility",
-        stat4: "EUR marketing budget managed",
-        profil_title: "Operator, not Consultant.",
-        profil_quote: "Someone who can simultaneously think Marketing, Sales and Business Development at leadership level — and understands how AI is genuinely changing these disciplines today.",
-        leistungen_title: "What I do.",
-        vorgehen_title: "How I work.",
-        step1_num: "Step 01", step2_num: "Step 02", step3_num: "Step 03", step4_num: "Step 04",
-        step1_title: "Assessment", step2_title: "Deep Dive", step3_title: "Decision", step4_title: "Execution",
-        tr_intro: "Two decades in leadership positions at global brands in Consumer Electronics, Professional Audio and Gaming — both B2C and B2B.",
-        partnerships_label: "Selected Partnerships & Projects",
-        eng_title: "How we can work together.",
-        eng1_badge: "Entry", eng2_badge: "Recommended", eng3_badge: "Long-term",
-        eng1_price: "Day rate · on request",
-        eng2_price: "Project basis · 4–12 weeks",
-        eng3_price: "Monthly · on request",
-        kontakt_title: "Book a Call.",
-        kontakt_h3: "No form ping-pong.<br>Direct contact.",
-        kontakt_p: "If you feel this could be a fit — write to me. No pitch needed, no detailed briefing. One sentence is enough: What's your problem?",
-        form_submit: "Send Message",
-        footer_copy: "© 2026 Christian Husingen. All rights reserved."
+        nav_profile:"Profile", nav_services:"Services", nav_partnerships:"Partnerships", nav_cta:"Book a Call",
+        hero_label:"Marketing · Sales · Business Development · AI",
+        hero_headline:"Strategy that<br>actually <em>works</em>.",
+        hero_sub:"A sparring partner for business leaders who want more than a polished slide deck — they want things done. Whether it's Marketing, Sales or Business Development, with AI as a practical tool, not a talking point. Twenty years of building, not advising.",
+        hero_cta:"Book a Call", hero_cta2:"What I do",
+        hero_stat_label:"By the numbers",
+        stat1:"Years in Marketing & Sales leadership",
+        stat2:"Markets led across EMEA",
+        stat3:"EUR in revenue responsibility",
+        stat4:"EUR in marketing budget managed",
+        profil_title:"Operator, not Consultant.",
+        profil_p1:"My background isn't consulting — it's building. <strong>Setting up marketing organisations from scratch, scaling e-commerce channels, negotiating global brand partnerships</strong> — two decades of it, in one of the most competitive categories out there.",
+        profil_p2:"What I bring isn't a methodology. It's judgement. Work with me and you'll have a clear read on your situation in days, not months — because I know where things tend to go wrong, and where the shortcuts actually are.",
+        profil_p3:"My focus: <strong>Marketing, Sales, Business Development and AI Integration</strong>. The crossover between these four is where I've spent my career — with deep hands-on experience across Consumer Electronics, Audio, Gaming and E-Commerce.",
+        profil_quote:"Someone who can hold Marketing, Sales and Business Development in their head at the same time — and genuinely understands what AI means for each of them.",
+        leistungen_title:"What I do.",
+        l1_desc:"Channel marketing, brand, performance, community, PR, Amazon, licensing — the full picture. Marketing with real operational depth behind it. I'll tell you what's worth your money and what isn't.",
+        l1_tag4:"PR · Esports · Amazon",
+        l2_desc:"Building sales structures, reading markets, sharpening portfolios. Retail, e-tail or D2C — I build sales organisations that actually scale.",
+        l2_tag1:"Sales Structures", l2_tag2:"Market & Portfolio Analysis", l2_tag3:"Pricing Strategy",
+        l3_desc:"Opening up B2B markets, building partner and alliance ecosystems, structuring licensing and cooperation deals. The kind of partnerships that still deliver five years down the line.",
+        l3_tag1:"B2B Development", l3_tag3:"Licensing & Partnerships",
+        l4_title:"AI Integration",
+        l4_desc:"AI as a practical lever, not a buzzword. Automating processes, building smarter workflows, helping teams actually use the tools. Where it makes a real difference in Marketing, Sales and Business Development — that's where I focus.",
+        l4_tag1:"AI Process Integration", l4_tag2:"Automation", l4_tag3:"AI Agents",
+        vorgehen_title:"How I work.",
+        step1_num:"Step 01", step2_num:"Step 02", step3_num:"Step 03", step4_num:"Step 04",
+        step1_title:"Listen first", step2_title:"Get into it", step3_title:"Give a clear view", step4_title:"See it through",
+        step1_desc:"First conversation, 60 minutes. I listen, I ask, I work out whether I'm genuinely the right person for this — and I'll say so if I'm not. No pitch, no preamble.",
+        step2_desc:"A proper look at what's actually going on — data, campaigns, structures, channels. Fast but thorough, because I know where to look and what to look for.",
+        step3_desc:"No 80-page report. Three to five clear recommendations, in priority order, with the reasoning behind each. What to do now, what to park, what to drop entirely. Straight talking.",
+        step4_desc:"If it makes sense, I stay involved — as a retainer, a regular sounding board, or someone who keeps an eye on execution and course-corrects when needed. Not a consultant who disappears after the deck.",
+        tr_intro:"Two decades leading teams at global brands across Consumer Electronics, Professional Audio and Gaming — on both the B2C and B2B sides.",
+        tr_razer:"<strong>Head of Marketing &amp; Business Development — EMEA</strong><br>Led Marketing, Brand and Community across the gaming hardware and software segment. Built and ran brand campaigns, social media, PR (launch and sustain), Esports partnerships and creator programmes. Full ownership of the brand's product portfolio across Europe. Structured partnerships with VCT EMEA and non-endemic brands including Lamborghini and NIU. Managed international teams and agencies across multiple EMEA markets.",
+        tr_shure:"<strong>Associate Director — EMEA</strong><br>Scaled the Consumer Audio segment across EMEA — built the distribution network, developed retail, and held full P&amp;L responsibility for sales and marketing. Created the pricing, portfolio and channel architecture for both B2C and specialist trade. Also led the ground-up build of the B2B and UCC division for the Stem brand, from launch through to a fully operational sales structure in Unified Communications.",
+        tr_acer:"<strong>Trade &amp; Channel Marketing — EMEA</strong><br>Full ownership of Trade and Channel Marketing at EMEA level — writing the playbooks for shop-in-shop, merchandising, sales promoter programmes and partner communications across the region. Managed shop-in-shop budgets of approximately €25M p.a. Hands-on execution across DACH, Benelux, Czech Republic, Slovakia and Hungary, whilst running the EMEA-wide strategy in parallel.",
+        tr_asus:"<strong>Trade Marketing Manager — Germany &amp; Austria</strong><br>Designed and rolled out a new shop-in-shop concept across Germany and Austria. Pitched and set up an external sales promoter agency, then built an in-house field team of five covering sales and merchandising. Responsible for POS activation, trade marketing and day-to-day execution at the point of sale.",
+        tr_lg:"<strong>Trade Marketing Manager — Germany</strong><br>Started with a focus on BTL, shop-in-shop and POS — then grew into full Trade Marketing responsibility across Brown Goods, White Goods and IT. Managed sales promoters, merchandisers and product trainers across every category. Ran all trade marketing activity in Germany, and sat on international working groups responsible for bringing Smart TV and 3D TV into retail.",
+        partnerships_label:"Selected Partnerships & Projects",
+        p1_desc:"Built and managed strategic technology alliances with leading hardware and software partners — co-marketing, co-branding and joint go-to-market programmes across Europe.",
+        p2_desc:"Esports sponsorships, team partnerships and publisher deals across the European gaming ecosystem — from tournament activations to creator programmes and team partnerships.",
+        p3_desc:"Non-endemic brand activations in the gaming space — luxury, fashion, music and motorsport meeting a young, global audience. Some of the sharpest cross-category work in European gaming.",
+        eng_title:"Ways to work together.",
+        eng1_badge:"Starting point", eng2_badge:"Most popular", eng3_badge:"Ongoing",
+        eng1_price:"Day rate · on request", eng2_price:"Project basis · 4–12 weeks", eng3_price:"Monthly · on request",
+        eng1_desc:"One day. One problem. One clear view. The right starting point for a strategy sense-check, pitch prep or working through something specific.",
+        eng2_desc:"For projects with a defined scope — a launch, repositioning, market entry, channel build-out. I stay until it's done.",
+        eng3_desc:"For businesses that want a reliable sparring partner in their corner on an ongoing basis — not just for one-off projects, but as a regular strategic counterweight.",
+        eng1_list:"<li>Prep call (60 min) beforehand</li><li>Full day working session — remote or in person</li><li>Written summary with clear recommendations</li><li>Follow-up call (30 min) two weeks later</li>",
+        eng2_list:"<li>Kickoff &amp; structured diagnostic</li><li>Weekly working sessions</li><li>Strategy document &amp; implementation roadmap</li><li>Hands-on support through delivery</li><li>Slack/email access between sessions</li>",
+        eng3_list:"<li>2–4 sessions per month</li><li>Priority access &amp; fast turnaround</li><li>Strategic support across topics as they come up</li><li>Network introductions where useful</li>",
+        eng_cta:"Get in touch",
+        kontakt_title:"Get in touch.",
+        kontakt_h3:"Skip the form-filling.<br>Just drop me a line.",
+        kontakt_p:"If this feels like a good fit, write to me. No polished brief needed. A sentence or two about what you're dealing with is plenty.",
+        form_submit:"Send message",
+        footer_impressum:"Legal Notice", footer_datenschutz:"Privacy Policy",
+        footer_copy:"© 2026 Christian Husingen. All rights reserved."
       }
     };
 
-    let currentLang = 'de';
+    let lang = 'de';
 
     function toggleLang() {
-      currentLang = currentLang === 'de' ? 'en' : 'de';
-      const t = translations[currentLang];
-      document.getElementById('lang-btn').textContent = currentLang === 'de' ? 'EN' : 'DE';
-      document.documentElement.lang = currentLang;
+      lang = lang === 'de' ? 'en' : 'de';
+      const t = T[lang];
+      // Update all tagged elements
       document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (t[key] !== undefined) el.innerHTML = t[key];
+        const k = el.getAttribute('data-i18n');
+        if (t[k] !== undefined) el.innerHTML = t[k];
       });
-      // Update page title
-      document.title = currentLang === 'en'
-        ? 'husingen. — Strategy that actually ships.'
-        : 'husingen. — Strategie, die operativ funktioniert.';
-      // Update form labels
-      if (currentLang === 'en') {
-        document.querySelector('label[for="name"]').textContent = 'Name';
-        document.querySelector('label[for="company"]').textContent = 'Company';
-        document.querySelector('label[for="email"]').textContent = 'Email';
-        document.querySelector('label[for="thema"]').textContent = 'Topic';
-        document.querySelector('label[for="nachricht"]').textContent = 'What is your problem?';
-        document.querySelector('#thema option[value=""]').textContent = 'Choose…';
-        document.querySelector('#thema option[value="sonstiges"]').textContent = 'Other';
-      } else {
-        document.querySelector('label[for="name"]').textContent = 'Name';
-        document.querySelector('label[for="company"]').textContent = 'Unternehmen';
-        document.querySelector('label[for="email"]').textContent = 'E-Mail';
-        document.querySelector('label[for="thema"]').textContent = 'Thema';
-        document.querySelector('label[for="nachricht"]').textContent = 'Was ist dein Problem?';
-        document.querySelector('#thema option[value=""]').textContent = 'Wählen …';
-        document.querySelector('#thema option[value="sonstiges"]').textContent = 'Sonstiges';
-      }
-    }
-  </script>
-
-
-  <script>
-    const translations = {
-      de: {
-        nav_profile: "Profil",
-        nav_services: "Leistungen",
-        nav_partnerships: "Partnerschaften",
-        nav_cta: "Gespräch anfragen",
-        hero_label: "Marketing · Sales · Business Development · KI",
-        hero_headline: "Strategie,<br>die <em>operativ</em><br>funktioniert.",
-        hero_sub: "Ich bin Sparringspartner für Unternehmen und Führungskräfte, die Marketing, Vertrieb und Business Development nicht nur denken, sondern umsetzen wollen — und dabei KI als echten Hebel nutzen. Kein Deck-Berater. Jemand, der selbst gebaut, skaliert und verhandelt hat.",
-        hero_cta: "Gespräch anfragen",
-        hero_cta2: "Was ich mache",
-        hero_stat_label: "Operative Bilanz",
-        stat1: "Jahre Berufserfahrung im Marketing & Vertrieb",
-        stat2: "Internationale Märkte geführt (EMEA)",
-        stat3: "EUR Umsatzverantwortung",
-        stat4: "EUR Marketingbudget verantwortet",
-        profil_title: "Operator, nicht Berater.",
-        profil_p1: "Ich habe nicht in einer Beratung gelernt zu beraten. Ich habe in Unternehmen gebaut: <strong>Marketing-Organisationen aufgestellt, E-Commerce-Kanäle skaliert, globale Markenpartnerschaften verhandelt</strong> — und das über zwei Dekaden in einem der kompetitivsten Segmente überhaupt.",
-        profil_p2: "Heute gebe ich dieses Wissen weiter — nicht als Methode, sondern als Urteil. Wer mit mir arbeitet, bekommt in wenigen Tagen eine Einschätzung, für die andere Monate brauchen. Weil ich die Fehler kenne. Weil ich die Abkürzungen kenne.",
-        profil_p3: "Mein Fokus: <strong>Marketing, Sales & Vertrieb, Business Development und KI-Integration</strong>. Das Schnittfeld dieser vier Disziplinen ist mein Zuhause — mit tiefer Branchenkenntnis in Consumer Electronics, Audio, Gaming und E-Commerce.",
-        profil_quote: "Jemand, der Marketing, Vertrieb und Business Development auf Führungsebene gleichzeitig denken kann — und weiß, wie KI diese Disziplinen heute wirklich verändert.",
-        leistungen_title: "Was ich mache.",
-        l1_desc: "Von Channel-Marketing über Brand, Performance und Community bis zu PR, von Amazon bis zu Partner- und Lizenzmarketing. Ganzheitliches Marketing mit operativer Tiefe — ich sage, was funktioniert und was Geld verbrennt.",
-        l1_tag4: "PR · Esports · Amazon",
-        l2_desc: "Vertriebsstrukturen aufbauen, Märkte analysieren, Portfolios schärfen. Ob klassischer Retail, E-Tail oder D2C — ich baue Vertrieb, der skaliert.",
-        l2_tag1: "Vertriebsstrukturen",
-        l2_tag2: "Markt- & Portfolioanalyse",
-        l2_tag3: "Preisgestaltung",
-        l3_desc: "B2B-Geschäft aufbauen, Partner- und Alliance-Ökosysteme entwickeln, Lizenz- und Kooperationsmodelle verhandeln. Ich öffne Türen und strukturiere Partnerschaften, die langfristig tragen.",
-        l3_tag1: "B2B-Aufbau",
-        l3_tag3: "Lizenz & Kooperationen",
-        l4_title: "KI-Integration",
-        l4_desc: "KI nicht als Buzzword, sondern als operativen Hebel: Prozesse automatisieren, Workflows mit KI-Agenten optimieren, Teams befähigen. Ich zeige, wo KI im Marketing, Vertrieb und Business Development echten Unterschied macht.",
-        l4_tag1: "KI-Prozessintegration",
-        l4_tag2: "Automatisierung",
-        l4_tag3: "KI-Agenten",
-        vorgehen_title: "Wie ich arbeite.",
-        step1_num: "Schritt 01", step2_num: "Schritt 02", step3_num: "Schritt 03", step4_num: "Schritt 04",
-        step1_title: "Einordnung", step2_title: "Eintauchen", step3_title: "Entscheidung", step4_title: "Umsetzung",
-        step1_desc: "Erstes Gespräch, 60 Minuten. Ich höre zu. Ich frage nach. Ich stelle fest, ob ich der richtige Sparringspartner bin — und sage es, wenn nicht. Kein Verkaufsgespräch.",
-        step2_desc: "Ich schaue mir an, was tatsächlich los ist: Daten, Kampagnen, Strukturen, Kanäle. Nicht oberflächlich. Schnell, aber gründlich — weil ich weiß, wo ich schauen muss.",
-        step3_desc: "Kein 80-seitiger Report. Drei bis fünf klare Empfehlungen, priorisiert, mit Begründung. Was sofort, was mittelfristig, was ich weglassen würde. Klares Wort, kein Weichspülen.",
-        step4_desc: "Wenn gewünscht, bleibe ich an Bord: als Retainer, als regelmäßiger Sparringspartner, als jemand, der Umsetzung begleitet und nachjustiert. Nicht als Consultant auf Distanz.",
-        tr_intro: "Zwei Jahrzehnte in Führungspositionen bei globalen Marken aus Consumer Electronics, Professional Audio und Gaming — sowohl im B2C- als auch im B2B-Umfeld.",
-        tr_razer: "<strong>Head of Marketing &amp; Business Development — EMEA</strong><br>Verantwortung für Marketing, Brand und Community im Gaming-Hardware- und Softwaresegment. Entwicklung und Steuerung von Brand-Kampagnen, Social Media, PR (Launch- und Sustain-Aktivitäten) sowie Esports-Partnerschaften und Creator-Programmen. Gesamtverantwortung für das Produktportfolio der Marke in Europa. Strategische Kooperationen mit VCT EMEA sowie Non-Endemic-Brands wie Lamborghini und NIU. Internationales Team- und Agentur-Management über mehrere EMEA-Märkte.",
-        tr_shure: "<strong>Associate Director — EMEA</strong><br>Verantwortung für die Skalierung des Consumer Audio Segments in ganz EMEA — inklusive Distributionsaufbau, Retail-Aufbau sowie vollständiger Sales- und Marketingverantwortung. Aufbau von Pricing-, Portfolio- und Kanalstrukturen für B2C und Fachhandel. Darüber hinaus initialer Aufbau des B2B- und UCC-Bereichs für die Marke Stem — von der Markteinführung bis zur Etablierung der Vertriebsstrukturen in der Unified Communications-Kategorie.",
-        tr_acer: "<strong>Trade &amp; Channel Marketing — EMEA</strong><br>Gesamtverantwortung für Trade und Channel Marketing auf EMEA-Ebene — inklusive der Entwicklung übergreifender Guidelines und Umsetzungskonzepte für Shop-in-Shop, Merchandising, Sales-Promoter-Programme und Partnerkommunikation. Verantwortung für Shop-in-Shop-Budgets von ca. 25 Mio. EUR p.a. Direkte operative Umsetzung in DACH, Benelux, Tschechien, der Slowakei und Ungarn — parallel zur EMEA-weiten Steuerung der Gesamtstrategie.",
-        tr_asus: "<strong>Trade Marketing Manager — Deutschland &amp; Österreich</strong><br>Entwicklung und Umsetzung eines neuen Shop-in-Shop-Konzepts für den deutschen und österreichischen Markt. Pitching und Aufbau einer externen Sales-Promoter-Agentur sowie Einstellung und Etablierung einer eigenen Sales- und Merchandising-Force von fünf Mitarbeitern im Handel. Verantwortung für POS-Aktivierung, Handelsmarketing und die operative Umsetzung am Point of Sale.",
-        tr_lg: "<strong>Trade Marketing Manager — Deutschland</strong><br>Einstieg mit Fokus auf BTL-Aktivitäten, Shop-in-Shop und POS-Installationen. Weiterentwicklung zur Gesamtverantwortung für Trade Marketing über die Business Units Braune Ware, Weiße Ware und IT. Steuerung und Führung von Sales Promotern, Merchandisern und Produkttrainern für alle Produktkategorien. Verantwortung für die gesamten Trade-Marketing-Aktivitäten in Deutschland. Parallel Mitarbeit in internationalen Marketing-Arbeitsgruppen — u.a. verantwortlich für die Handelsintegration von Smart TV und 3D TV.",
-        partnerships_label: "Ausgewählte Partnerschaften & Projekte",
-        p1_desc: "Aufbau und Steuerung strategischer Technologie-Allianzen mit führenden Hardware- und Software-Partnern. Co-Marketing, Co-Branding und gemeinsame Go-to-Market-Aktivitäten auf europäischer Ebene.",
-        p2_desc: "Esports-Sponsorings, Team-Partnerschaften und Publisher-Kooperationen im europäischen Gaming-Ökosystem — von Turniersystemen bis zu Creator-Programmen und Teampartnerschaften.",
-        p3_desc: "Non-Endemic-Brand-Aktivierungen im Gaming-Kontext — Luxus, Mode, Musik und Motorsport treffen auf eine junge, globale Audience. Paradebeispiele für Cross-Category-Kollaborationen mit echtem kulturellen Resonanzraum.",
-        eng_title: "Wie wir arbeiten können.",
-        eng1_badge: "Einstieg", eng2_badge: "Empfohlen", eng3_badge: "Langfristig",
-        eng1_price: "Tagessatz · auf Anfrage",
-        eng2_price: "Projektbasis · 4–12 Wochen",
-        eng3_price: "Monatlich · auf Anfrage",
-        eng1_desc: "Ein Tag. Ein Thema. Eine klare Einschätzung. Ideal für einen ersten, tiefen Tauchgang — Strategie-Review, Pitch-Vorbereitung oder konkrete Problemlösung.",
-        eng2_desc: "Für konkrete Projekte mit klarem Scope und Ziel — Launch, Repositionierung, Markteintritt, Kanal-Aufbau. Ich bin dabei, bis es geliefert ist.",
-        eng3_desc: "Für Unternehmen, die einen verlässlichen Sparringspartner brauchen — nicht für jedes Einzelprojekt, sondern als regelmäßigen strategischen Kontrapunkt.",
-        eng1_list: "<li>Vorgespräch (60 min) zur Vorbereitung</li><li>Ganztägige Sparring-Session (remote oder vor Ort)</li><li>Schriftliche Zusammenfassung mit Empfehlungen</li><li>Follow-up-Call (30 min) nach zwei Wochen</li>",
-        eng2_list: "<li>Kickoff &amp; strukturierte Analyse</li><li>Wöchentliche Sparring-Sessions</li><li>Strategie-Dokument &amp; Umsetzungs-Roadmap</li><li>Begleitung der Umsetzung auf Wunsch</li><li>Slack/E-Mail-Zugang zwischen Sessions</li>",
-        eng3_list: "<li>2–4 Sessions pro Monat</li><li>Priorisierter Zugang &amp; schnelle Reaktionszeiten</li><li>Strategische Begleitung über Themen hinweg</li><li>Netzwerk-Zugang bei Bedarf</li>",
-        eng_cta: "Anfragen",
-        kontakt_title: "Gespräch anfragen.",
-        kontakt_h3: "Kein Formular-Ping-Pong.<br>Direkt anfragen.",
-        kontakt_p: "Wenn du das Gefühl hast, dass das passt — schreib mir. Kein Pitch nötig, kein ausformuliertes Briefing. Ein Satz reicht: Was ist dein Problem?",
-        form_submit: "Nachricht senden",
-        footer_impressum: "Impressum",
-        footer_datenschutz: "Datenschutz",
-        footer_copy: "© 2026 Christian Husingen. Alle Rechte vorbehalten."
-      },
-      en: {
-        nav_profile: "Profile",
-        nav_services: "Services",
-        nav_partnerships: "Partnerships",
-        nav_cta: "Book a Call",
-        hero_label: "Marketing · Sales · Business Development · AI",
-        hero_headline: "Strategy that<br>actually <em>ships</em>.",
-        hero_sub: "I am a sparring partner for companies and executives who want to do more than think about Marketing, Sales and Business Development — they want to execute it. With AI as a genuine lever. Not a deck consultant. Someone who has built, scaled and negotiated.",
-        hero_cta: "Book a Call",
-        hero_cta2: "What I do",
-        hero_stat_label: "Operational Track Record",
-        stat1: "Years of experience in Marketing & Sales",
-        stat2: "International markets led (EMEA)",
-        stat3: "EUR revenue responsibility",
-        stat4: "EUR marketing budget managed",
-        profil_title: "Operator, not Consultant.",
-        profil_p1: "I did not learn to consult in a consultancy. I built things inside companies: <strong>set up marketing organisations, scaled e-commerce channels, negotiated global brand partnerships</strong> — across two decades in one of the most competitive segments out there.",
-        profil_p2: "Today I pass on that knowledge — not as a methodology, but as judgement. Those who work with me receive an assessment in days that others would need months for. Because I know the mistakes. Because I know the shortcuts.",
-        profil_p3: "My focus: <strong>Marketing, Sales, Business Development and AI Integration</strong>. The intersection of these four disciplines is where I work — with deep industry knowledge in Consumer Electronics, Audio, Gaming and E-Commerce.",
-        profil_quote: "Someone who can simultaneously think Marketing, Sales and Business Development at leadership level — and understands how AI is genuinely changing these disciplines today.",
-        leistungen_title: "What I do.",
-        l1_desc: "From channel marketing through brand, performance and community to PR, from Amazon to partner and licensing marketing. Holistic marketing with operational depth — I tell you what works and what burns money.",
-        l1_tag4: "PR · Esports · Amazon",
-        l2_desc: "Build sales structures, analyse markets, sharpen portfolios. Whether traditional retail, e-tail or D2C — I build sales organisations that scale.",
-        l2_tag1: "Sales Structures",
-        l2_tag2: "Market & Portfolio Analysis",
-        l2_tag3: "Pricing",
-        l3_desc: "Build B2B business, develop partner and alliance ecosystems, negotiate licensing and cooperation models. I open doors and structure partnerships built to last.",
-        l3_tag1: "B2B Development",
-        l3_tag3: "Licensing & Cooperations",
-        l4_title: "AI Integration",
-        l4_desc: "AI not as a buzzword, but as an operational lever: automating processes, optimising workflows with AI agents, enabling teams. I show you where AI makes a genuine difference in Marketing, Sales and Business Development.",
-        l4_tag1: "AI Process Integration",
-        l4_tag2: "Automation",
-        l4_tag3: "AI Agents",
-        vorgehen_title: "How I work.",
-        step1_num: "Step 01", step2_num: "Step 02", step3_num: "Step 03", step4_num: "Step 04",
-        step1_title: "Assessment", step2_title: "Deep Dive", step3_title: "Decision", step4_title: "Execution",
-        step1_desc: "First conversation, 60 minutes. I listen. I ask questions. I determine whether I am the right sparring partner — and say so if I am not. No sales pitch.",
-        step2_desc: "I look at what is actually going on: data, campaigns, structures, channels. Not superficially. Fast, but thorough — because I know where to look.",
-        step3_desc: "No 80-page report. Three to five clear recommendations, prioritised and reasoned. What to do now, what to do mid-term, what I would leave out. Straight talking, no sugarcoating.",
-        step4_desc: "If desired, I stay on board: as a retainer, as a regular sparring partner, as someone who accompanies execution and adjusts course. Not as a consultant at arm's length.",
-        tr_intro: "Two decades in leadership roles at global brands across Consumer Electronics, Professional Audio and Gaming — across both B2C and B2B.",
-        tr_razer: "<strong>Head of Marketing &amp; Business Development — EMEA</strong><br>Responsible for Marketing, Brand and Community across the gaming hardware and software segment. Developed and led brand campaigns, social media, PR (launch and sustain activities), Esports partnerships and creator programmes. Full responsibility for the brand's product portfolio across Europe. Strategic partnerships with VCT EMEA and non-endemic brands including Lamborghini and NIU. International team and agency management across multiple EMEA markets.",
-        tr_shure: "<strong>Associate Director — EMEA</strong><br>Responsible for scaling the Consumer Audio segment across EMEA — including distribution setup, retail development and full sales and marketing accountability. Built pricing, portfolio and channel structures for B2C and specialist retail. Additionally led the initial build-out of the B2B and UCC division for the Stem brand — from market launch through to establishing sales structures in the Unified Communications category.",
-        tr_acer: "<strong>Trade &amp; Channel Marketing — EMEA</strong><br>Full EMEA-level responsibility for Trade and Channel Marketing — including development of cross-market guidelines and implementation frameworks for shop-in-shop, merchandising, sales promoter programmes and partner communications. Managed shop-in-shop budgets of approximately €25M p.a. Direct operational execution across DACH, Benelux, Czech Republic, Slovakia and Hungary, alongside EMEA-wide strategic oversight.",
-        tr_asus: "<strong>Trade Marketing Manager — Germany &amp; Austria</strong><br>Developed and implemented a new shop-in-shop concept for the German and Austrian market. Pitched and established an external sales promoter agency, and recruited and built an in-house sales and merchandising team of five staff in retail. Responsible for POS activation, trade marketing and operational execution at the point of sale.",
-        tr_lg: "<strong>Trade Marketing Manager — Germany</strong><br>Joined with a focus on BTL activities, shop-in-shop and POS installations. Progressed to full responsibility for Trade Marketing across the Brown Goods, White Goods and IT business units. Managed and led sales promoters, merchandisers and product trainers across all product categories. Responsible for all trade marketing activities in Germany. Concurrently contributed to international marketing working groups — including responsibility for retail integration of Smart TV and 3D TV.",
-        partnerships_label: "Selected Partnerships & Projects",
-        p1_desc: "Development and management of strategic technology alliances with leading hardware and software partners. Co-marketing, co-branding and joint go-to-market activities at European level.",
-        p2_desc: "Esports sponsorships, team partnerships and publisher cooperations across the European gaming ecosystem — from tournament systems to creator programmes and team partnerships.",
-        p3_desc: "Non-endemic brand activations in the gaming context — luxury, fashion, music and motorsport meet a young, global audience. Flagship examples of cross-category collaborations with genuine cultural resonance.",
-        eng_title: "How we can work together.",
-        eng1_badge: "Entry", eng2_badge: "Recommended", eng3_badge: "Long-term",
-        eng1_price: "Day rate · on request",
-        eng2_price: "Project basis · 4–12 weeks",
-        eng3_price: "Monthly · on request",
-        eng1_desc: "One day. One topic. One clear assessment. Ideal for a first, in-depth session — strategy review, pitch preparation or solving a concrete problem.",
-        eng2_desc: "For concrete projects with a defined scope and goal — launch, repositioning, market entry, channel build-out. I am there until it is delivered.",
-        eng3_desc: "For companies that need a reliable sparring partner — not for every individual project, but as a regular strategic counterpoint.",
-        eng1_list: "<li>Preparation call (60 min)</li><li>Full-day sparring session (remote or on-site)</li><li>Written summary with recommendations</li><li>Follow-up call (30 min) after two weeks</li>",
-        eng2_list: "<li>Kickoff &amp; structured analysis</li><li>Weekly sparring sessions</li><li>Strategy document &amp; implementation roadmap</li><li>Implementation support on request</li><li>Slack/email access between sessions</li>",
-        eng3_list: "<li>2–4 sessions per month</li><li>Priority access &amp; fast response times</li><li>Strategic support across topics</li><li>Network access where relevant</li>",
-        eng_cta: "Get in touch",
-        kontakt_title: "Book a Call.",
-        kontakt_h3: "No form ping-pong.<br>Just get in touch.",
-        kontakt_p: "If this feels like a good fit — write to me. No pitch needed, no detailed brief. One sentence is enough: What is your problem?",
-        form_submit: "Send Message",
-        footer_impressum: "Legal Notice",
-        footer_datenschutz: "Privacy Policy",
-        footer_copy: "© 2026 Christian Husingen. All rights reserved."
-      }
-    };
-
-    let currentLang = 'de';
-
-    function toggleLang() {
-      currentLang = currentLang === 'de' ? 'en' : 'de';
-      applyLang(currentLang);
-    }
-
-    function applyLang(lang) {
-      const t = translations[lang];
+      // Button label
       document.getElementById('lang-btn').textContent = lang === 'de' ? 'EN' : 'DE';
       document.documentElement.lang = lang;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (t[key] !== undefined) el.innerHTML = t[key];
-      });
       // Form labels
-      const labels = {
-        de: { company: 'Unternehmen', email: 'E-Mail', thema: 'Thema', nachricht: 'Was ist dein Problem?' },
-        en: { company: 'Company', email: 'Email', thema: 'Topic', nachricht: 'What is your problem?' }
-      };
-      document.querySelector('label[for="company"]').textContent = labels[lang].company;
-      document.querySelector('label[for="email"]').textContent = labels[lang].email;
-      document.querySelector('label[for="thema"]').textContent = labels[lang].thema;
-      document.querySelector('label[for="nachricht"]').textContent = labels[lang].nachricht;
-      // Select options
-      const opts = { de: ['Wählen …','Marketing & Brand','Retail / E-Tail / Amazon','Gaming & Partnerships','Agency Sparring','Sonstiges'],
-                     en: ['Choose…','Marketing & Brand','Retail / E-Tail / Amazon','Gaming & Partnerships','Agency Sparring','Other'] };
-      document.querySelectorAll('#thema option').forEach((o, i) => { if (opts[lang][i]) o.textContent = opts[lang][i]; });
-      // Placeholders
-      document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
-        el.placeholder = el.getAttribute('data-placeholder-' + lang);
-      });
+      const L = {
+        de:{company:'Unternehmen', email:'E-Mail', thema:'Thema', msg:'Was ist dein Problem?', ph_name:'Max Mustermann', ph_co:'Firma GmbH', ph_email:'max@beispiel.com', ph_msg:'Ein Satz reicht.', opt0:'Wählen …', optOther:'Sonstiges'},
+        en:{company:'Company',     email:'Email',  thema:'Topic', msg:'What's the problem?', ph_name:'Jane Smith',    ph_co:'Company Ltd.', ph_email:'jane@example.com', ph_msg:'A sentence or two is fine.', opt0:'Choose…', optOther:'Other'}
+      }[lang];
+      document.querySelector('label[for="company"]').textContent = L.company;
+      document.querySelector('label[for="email"]').textContent   = L.email;
+      document.querySelector('label[for="thema"]').textContent   = L.thema;
+      document.querySelector('label[for="nachricht"]').textContent = L.msg;
+      document.querySelector('#name').placeholder    = L.ph_name;
+      document.querySelector('#company').placeholder = L.ph_co;
+      document.querySelector('#email').placeholder   = L.ph_email;
+      document.querySelector('#nachricht').placeholder = L.ph_msg;
+      const opts = document.querySelectorAll('#thema option');
+      if (opts[0]) opts[0].textContent = L.opt0;
+      if (opts[opts.length-1]) opts[opts.length-1].textContent = L.optOther;
       // Page title
-      document.title = lang === 'en' ? 'husingen. — Strategy that actually ships.' : 'husingen. — Strategie, die operativ funktioniert.';
+      document.title = lang === 'en' ? 'husingen. — Strategy that actually works.' : 'husingen. — Strategie, die operativ funktioniert.';
     }
   </script>
 
