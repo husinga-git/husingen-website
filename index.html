@@ -991,6 +991,7 @@
     }
     .lang-toggle:hover { background: var(--off-black); color: var(--paper); border-color: var(--off-black); }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -1600,6 +1601,8 @@
     let lang = 'de';
 
     // ── Kontaktformular ──────────────────────────────────────────────────
+    emailjs.init({ publicKey: '5WM_KOuFSPOhNrf7L' });
+
     document.addEventListener('DOMContentLoaded', function () {
       const form    = document.getElementById('kontakt-form');
       const btn     = document.getElementById('form-submit-btn');
@@ -1650,6 +1653,19 @@
             success.style.display = 'block';
             document.getElementById('form-success-title').textContent = m.successTitle;
             document.getElementById('form-success-msg').textContent   = m.successMsg;
+
+            // Bestätigungsmail an den Anfragenden via EmailJS (Fehler hier blockieren nicht den Erfolg)
+            const themaSelect = form.querySelector('#thema');
+            const themaLabel  = themaSelect.options[themaSelect.selectedIndex]?.text || '';
+            emailjs.send('service_n70uuvh', 'template_cjdwtgt', {
+              name:      data.get('name'),
+              email:     data.get('email'),
+              thema:     themaLabel,
+              nachricht: data.get('nachricht')
+            }).catch(function (err) {
+              console.error('EmailJS error:', err);
+            });
+
             form.reset();
           } else {
             throw new Error('non-ok response');
@@ -1684,7 +1700,7 @@
       }[lang];
       document.querySelector('label[for="company"]').textContent = L.company;
       document.querySelector('label[for="email"]').textContent   = L.email;
-      document.querySelector('label[for="thema"]').textContent   = L.thema;
+      document.querySelector('label[for="thema"]').textContent = L.thema;
       document.querySelector('label[for="nachricht"]').textContent = L.msg;
       document.querySelector('#name').placeholder    = L.ph_name;
       document.querySelector('#company').placeholder = L.ph_co;
@@ -1700,3 +1716,4 @@
 
 </body>
 </html>
+>
